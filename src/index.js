@@ -1,4 +1,8 @@
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-ReactDOM.render(<p>Your App goes here....</p>, document.getElementById('root'));
+import events from './data/events.json';
+import getEvents from './Events';
+
+ReactDOM.render(getEvents(events), document.getElementById('root'));
