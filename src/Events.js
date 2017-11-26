@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 class Events extends React.Component {
-  render () {
+  render() {
     return (
       <ul>
         {this.props.events.map(item => {
@@ -20,8 +21,11 @@ class Events extends React.Component {
           return null;
         })}
       </ul>
-    );    
+    );
   }
 };
 
+Events.propTypes = {
+  events: PropTypes.array.isRequired
+};
 export default Events;
