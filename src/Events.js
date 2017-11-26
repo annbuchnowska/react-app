@@ -1,9 +1,9 @@
 import React from 'react';
 
-const getEvents = (events) => {
+const Events = (props) => {
   return (
     <ul>
-      {events.map(item => {
+      {props.events.map(item => {
         const date = new Date(item.date);
 
         if (date >= Date.now()) {
@@ -15,10 +15,11 @@ const getEvents = (events) => {
             </li>
           );
         }
+
         return null;
       })}
     </ul>
   );
 };
 
-export default getEvents;
+export default Events;
